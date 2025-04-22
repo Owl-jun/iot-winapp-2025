@@ -263,6 +263,14 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 - VS Code > 오른쪽 하단 상태표시줄 UTF-8 클릭 인코딩하여 다시 열기 또는 저장
 - VS > 다른이름으로 저장 > 인코딩하여 저장
 
+- 깃 리포지토리 -> .git -> config
+- 맨 윗줄 추가
+```ini
+[i18n]
+    commitEncoding = utf-8
+    logOutputEncoding = utf-8
+```
+
 ### 윈앱 컨트롤 2
 - `MaskedTextBox` : 사용자에게 주어진 형태로만 입력을 하도록 강제하는 텍스트 입력컨트롤
     - Txt*
@@ -309,14 +317,16 @@ IoT 개발자 C#/WinApp 리포지토리 2025
         - 멤버변수 와 함수(메서드)로 구성
         - Get/Set 
 
-    7. 접근제어자
+    7. 접근제어자 - [소스](./day03/SyntaxWinApp01/SyntaxWinApp01/Person.cs)
         - private : 클래스 내 접근
         - public : 어디서나 접근
         - protected : 내부, 상속 관계에서 접근
         - internal : 동일 네임스페이스에서 public
         - internal protected : 동일 네임스페이스 protected
 
-    8. 상속, 다형성, 추상클래스, 인터페이스
+        <img src="./image/cs0005.png" width = 600>
+
+    8. 상속, 다형성, 추상클래스, 인터페이스 - [소스](./day03/SyntaxWinApp01/SyntaxWinApp02/Computer.cs)
         - Java는 한 파일에 한 클래스 선호
         - C#은 한 파일에 클래스 여러개 생성 무방
         - 상속
@@ -339,6 +349,15 @@ IoT 개발자 C#/WinApp 리포지토리 2025
             - 다중 상속을 하기 위해 씀.
             - 인터페이스는 직접 코딩 말것
             - Alt + Enter 좋누
+        
+        - 얕은 복사 , 깊은 복사
+            - 얕은 복사 : 내부를 같이 참조하는 형태
+            - 깊은 복사 : 독립적인 객체
+
+        - ref, out 키워드 > 차후에 ...
+        - 열거형
+
+        <img src="./image/cs0006.png" width = 600>
 
     9. 예외처리
     10. 컬렉션
