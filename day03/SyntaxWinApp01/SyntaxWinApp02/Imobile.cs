@@ -12,7 +12,7 @@ namespace SyntaxWinApp02
         void Call();
         string GetList();
     }
-
+    
     internal class Iphone : Imobile 
     {
         public void Call() {
