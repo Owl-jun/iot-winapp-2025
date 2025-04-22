@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxWinApp01", "SyntaxWinApp01\SyntaxWinApp01.csproj", "{2BEC0778-1742-4762-B17C-1D9583059A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxWinApp02", "SyntaxWinApp02\SyntaxWinApp02.csproj", "{BB2224A8-A903-47F7-AAB5-44E73EC7027E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{2A3A057F-5D22-31FD-628C-DF5EF75AEF1E}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\add.png = Resources\add.png
+		Resources\check.png = Resources\check.png
+		Resources\computer-case.png = Resources\computer-case.png
+		Resources\laptop.png = Resources\laptop.png
+		Resources\server.png = Resources\server.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BEC0778-1742-4762-B17C-1D9583059A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEC0778-1742-4762-B17C-1D9583059A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEC0778-1742-4762-B17C-1D9583059A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEC0778-1742-4762-B17C-1D9583059A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB2224A8-A903-47F7-AAB5-44E73EC7027E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2224A8-A903-47F7-AAB5-44E73EC7027E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2224A8-A903-47F7-AAB5-44E73EC7027E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2224A8-A903-47F7-AAB5-44E73EC7027E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6C984DA-566F-430F-A27F-D9CAB439C564}
+	EndGlobalSection
+EndGlobal

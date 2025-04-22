@@ -31,13 +31,13 @@
             LblName = new Label();
             TxtName = new TextBox();
             LblAge = new Label();
-            TxtAge = new TextBox();
             LblSex = new Label();
             RdoMale = new RadioButton();
             RdoFemale = new RadioButton();
             BtnMsg = new Button();
             LblResult = new Label();
             TxtResult = new TextBox();
+            TxtAge = new MaskedTextBox();
             SuspendLayout();
             // 
             // LblName
@@ -69,14 +69,7 @@
             LblAge.Name = "LblAge";
             LblAge.Size = new Size(66, 15);
             LblAge.TabIndex = 0;
-            LblAge.Text = "나이 입력 :";
-            // 
-            // TxtAge
-            // 
-            TxtAge.Location = new Point(91, 41);
-            TxtAge.Name = "TxtAge";
-            TxtAge.Size = new Size(162, 23);
-            TxtAge.TabIndex = 2;
+            LblAge.Text = "생년 월일 :";
             // 
             // LblSex
             // 
@@ -136,9 +129,9 @@
             LblResult.ForeColor = SystemColors.Info;
             LblResult.Location = new Point(12, 151);
             LblResult.Name = "LblResult";
-            LblResult.Size = new Size(62, 15);
+            LblResult.Size = new Size(66, 15);
             LblResult.TabIndex = 0;
-            LblResult.Text = "결      과 :";
+            LblResult.Text = "결       과 :";
             // 
             // TxtResult
             // 
@@ -148,19 +141,28 @@
             TxtResult.Size = new Size(548, 221);
             TxtResult.TabIndex = 5;
             // 
+            // TxtAge
+            // 
+            TxtAge.Location = new Point(91, 42);
+            TxtAge.Mask = "0000-00-00";
+            TxtAge.Name = "TxtAge";
+            TxtAge.Size = new Size(162, 23);
+            TxtAge.TabIndex = 2;
+            TxtAge.ValidatingType = typeof(DateTime);
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(800, 450);
+            Controls.Add(TxtAge);
             Controls.Add(BtnMsg);
             Controls.Add(RdoFemale);
             Controls.Add(RdoMale);
             Controls.Add(LblSex);
             Controls.Add(TxtResult);
             Controls.Add(LblResult);
-            Controls.Add(TxtAge);
             Controls.Add(LblAge);
             Controls.Add(TxtName);
             Controls.Add(LblName);
@@ -175,12 +177,12 @@
         private Label LblName;
         private TextBox TxtName;
         private Label LblAge;
-        private TextBox TxtAge;
         private Label LblSex;
         private RadioButton RdoMale;
         private RadioButton RdoFemale;
         private Button BtnMsg;
         private Label LblResult;
         private TextBox TxtResult;
+        private MaskedTextBox TxtAge;
     }
 }

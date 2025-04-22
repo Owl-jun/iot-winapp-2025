@@ -17,7 +17,19 @@ namespace SystaxWinApp04
             else
             {
                 // TO DO
-                TxtResult.Text = "꾸에엥?";
+                LblResult.Text = "처리 결과 : ";
+                //TxtResult.Text = "꾸에엥?";
+
+                string name = TxtName.Text.Trim();
+                DateTime birth = DateTime.Parse(TxtAge.Text.Trim());
+                int age = (DateTime.Now.Year - birth.Year);
+                string gender = RdoMale.Checked ? "남" : "여";
+                TxtResult.Text += "이름 : " + name + "\r\n";
+                TxtResult.Text += "나이 : " + age + "\r\n";
+                TxtResult.Text += "생년월일 : " + birth + "\r\n";
+                TxtResult.Text += "성별 : " + gender + "\r\n";
+                
+                TxtResult.Text = $"저는 {name} 이고, {birth:yyyy-mm-dd} 에 태어난 {age}살 {gender}자 입니다.";
             }
         }
     }
