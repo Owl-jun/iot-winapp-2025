@@ -367,9 +367,29 @@ IoT 개발자 C#/WinApp 리포지토리 2025
     - Nud* 이름으로 시작
     - Minimum & Maximum & Value
 
+
+- `RichTextBox` : 포매팅이 가능한 텍스트박스
+    - MS Word, 한글 과 같은 문장 꾸미기, 페이지 꾸미기 등이 가능.
+    - ScrollBars
+        - Forced
+    - WordWrap : 래핑
+
+- `OpenFileDialog` : 읽을 파일 창 컨트롤
+    - DlgOpen
+    - 코딩으로 설정내용 작성
+
+- `SaveFileDialog` : 저장 파일 창 컨트롤
+    - DlgSave
+    - 코딩으로 설정내용 작성
+
+- `ColorDialog` : 색상 선택하는 다이얼로그 컨트롤
+    - DlgColor
+    
+
 - 대부분 컨트롤 속성
     - Anchor : 현 컨트롤의 앵커포인트
     - Dock : 위치 도킹
+    - Font : 폰트관련
 
 ### VS 개발팁
 - 코드조각(Code Snippet)을 최대한 활용(코딩량 줄임, 오타 예방)
@@ -393,11 +413,25 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 
         <img src="./image/cs0007.png" width = 600>
 
-    10. 컬렉션
+    10. 컬렉션 - [소스](./day04/Day04Study/SyntaxWinApp02/FrmMain.cs)
         - 배열, 리스트, 딕셔너리, 큐, 스택 등 여러데이터를 저장하고 다루는 구조를 가진 객체를 통칭
         - 배열로 콤보박스에 데이터 할당
+        - 리스트로 콤보박스 데이터 할당
+        - 딕셔너리로 콤보박스 데이터 할당
+
+        <img src="./image/cs0009.png" width = 600>
+
         
-    11. 파일입출력
+    11. 파일입출력 - [소스](./day04/Day04Study/SyntaxWinApp03/FrmMain.cs)
+        - 파일 쓰기, 읽기 기능
+
+        <img src="./image/cs0010.png" width = 600>
+
+
+## 5일차
+
+### C# 문법
+- 기본 문법
     12. 델리게이트, 이벤트
     13. 람다식
     14. LINQ
@@ -405,6 +439,9 @@ IoT 개발자 C#/WinApp 리포지토리 2025
     16. 속성
     17. 제네릭 
 
+## 6일차
+
+### C# 응용 - WPF
 
 ## 10일차
 

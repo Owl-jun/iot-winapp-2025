@@ -38,6 +38,8 @@
             CboArray = new ComboBox();
             label2 = new Label();
             CboList = new ComboBox();
+            label3 = new Label();
+            CmbDict = new ComboBox();
             SuspendLayout();
             // 
             // BtnMsg
@@ -46,7 +48,7 @@
             BtnMsg.ImageAlign = ContentAlignment.MiddleLeft;
             BtnMsg.ImageIndex = 0;
             BtnMsg.ImageList = imageList1;
-            BtnMsg.Location = new Point(472, 259);
+            BtnMsg.Location = new Point(561, 394);
             BtnMsg.Name = "BtnMsg";
             BtnMsg.Padding = new Padding(12, 0, 0, 0);
             BtnMsg.Size = new Size(100, 40);
@@ -73,13 +75,13 @@
             TxtRes.Location = new Point(250, 8);
             TxtRes.Multiline = true;
             TxtRes.Name = "TxtRes";
-            TxtRes.Size = new Size(322, 245);
+            TxtRes.Size = new Size(411, 380);
             TxtRes.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(18, 179);
+            label1.Location = new Point(40, 200);
             label1.Name = "label1";
             label1.Size = new Size(71, 15);
             label1.TabIndex = 3;
@@ -88,7 +90,7 @@
             // CboArray
             // 
             CboArray.FormattingEnabled = true;
-            CboArray.Location = new Point(95, 176);
+            CboArray.Location = new Point(117, 197);
             CboArray.Name = "CboArray";
             CboArray.Size = new Size(121, 23);
             CboArray.TabIndex = 4;
@@ -97,7 +99,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(18, 208);
+            label2.Location = new Point(40, 229);
             label2.Name = "label2";
             label2.Size = new Size(71, 15);
             label2.TabIndex = 3;
@@ -106,18 +108,38 @@
             // CboList
             // 
             CboList.FormattingEnabled = true;
-            CboList.Location = new Point(95, 205);
+            CboList.Location = new Point(117, 226);
             CboList.Name = "CboList";
             CboList.Size = new Size(121, 23);
             CboList.TabIndex = 4;
             CboList.SelectedIndexChanged += CboList_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(40, 258);
+            label3.Name = "label3";
+            label3.Size = new Size(71, 15);
+            label3.TabIndex = 3;
+            label3.Text = "딕셔너리 당";
+            // 
+            // CmbDict
+            // 
+            CmbDict.FormattingEnabled = true;
+            CmbDict.Location = new Point(117, 255);
+            CmbDict.Name = "CmbDict";
+            CmbDict.Size = new Size(121, 23);
+            CmbDict.TabIndex = 4;
+            CmbDict.SelectedIndexChanged += CboList_SelectedIndexChanged;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.images;
-            ClientSize = new Size(584, 311);
+            ClientSize = new Size(673, 446);
+            Controls.Add(CmbDict);
+            Controls.Add(label3);
             Controls.Add(CboList);
             Controls.Add(label2);
             Controls.Add(CboArray);
@@ -142,5 +164,7 @@
         private ImageList imageList1;
         private Label label2;
         private ComboBox CboList;
+        private Label label3;
+        private ComboBox CmbDict;
     }
 }
