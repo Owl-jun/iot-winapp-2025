@@ -434,16 +434,131 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 
 ## 5일차
 
+### 윈앱 컨트롤 4
+
+- `StatusStrip` : 상태표시줄, 서브컨트롤 추가가능
+    - `SatusLabel` : 글자만 표시
+    - `Progressbar` : 진행바표시
+    - `DropDownButton` : 드롭다운버튼
+    - `SplitButton` : 버튼
+    - `SizingGrip` : 우측하단의 사지즈조절 아이콘 표시
+
 ### C# 문법
 - 기본 문법
     12. 델리게이트, 이벤트
-    13. 람다식
-    14. LINQ
-    15. 비동기 
-    16. 속성
-    17. 제네릭 
+        - 함수포인터임
+        - 메서드를 변수처럼 저장하고 호출 할 수 있는 타입
+        - 대리자는 메서드를 여러개 가질 수 있으며
+        - 호출 시 한번에 모두 호출
+        - 대리자는 호출할 메서드와 파라미터가 일치
+
+        ```
+        -> 유저가 버튼 클릭 
+        -> OS가 이벤트 감지
+        -> WinForms 의 메시지루프가 이벤트 획득
+        -> 이벤트 핸들러 탐색
+        -> 델리게이트 통한 메서드 호출
+        ```
+        - 대리자의 장점
+            - 메서드를 변수처럼 저장
+            - 런타임 시 메서드를 바꿀 수 있음
+            - 한 놈이 여러개의 메서드를 호출 할 수 있음
+
+        - 델리게이트 가독성을 위해 나뉜 녀석들
+
+        - Action (리턴값X)
+            - Action<T1,T2...> act = 함수명;
+        - Func (리턴값O)
+            - Func<T1,T2...TResult> func = 함수명;
+        - Predicate (판단)
+            - Predicate<T1> pre = x => x%2 ==0;
+
+        - 이벤트 : 상태 변화를 알리는 신호이다.
+
+        - 흐름
+        ```
+        -- 하드웨어 레벨 --
+        신호 발생  
+        > OS에서 신호에 맞는 핸들러 호출 (펌웨어/디바이스 드라이버)  
+        > 핸들링 후 상태 변화 == 이것이 하나의 이벤트 일 수있다.
+
+        -- 메시지 루프 --
+        > 메시지 큐에 상태 변화 감지 (ex. 클릭, 입력 등)
+
+        -- 사용자 레벨 --
+        > 이벤트 핸들링 (WinForms, WPF, etc.)
+        ```
+
+    <img src="./image/cs0011.png" width=600>
+
+- 고급 문법
+    1. 람다식 - C# 3.0부터 도입 - [소스](./day05/Day05Study/SyntaxWinApp01/FrmMain.cs)
+        - 한 줄 함수 (간단한 것들)
+
+    2. LINQ - C# 3.0부터 도입
+        - Language Integrated Query : 언어에 통합된 쿼리
+        - SQL문과 유사하다.
+
+    3. 속성 - Property
+        - 객체지향 클래스에서 멤버변수(명사) 중 public 변수
+        - 첫번째 글자 대문자
+        - { get; set; } 형태로 구성
+        - 일반 클래스(멤버변수) : 객체 데이터 저장, 상태 표현
+            - 코드로만 작성
+        - UI 클래스(속성) : UI 상태나 외형, 기능 제어
+            - 폼 디자인, 코드 둘 다 사용
+
+    4. Partial 클래스 : C#에만 존재
+        - 나누어진 같은 이름의 클래스를 컴파일 시 하나로 합쳐주는 기능
+        ```cs
+        public partial class FrmMain : Form
+        {
+
+        }
+        partial class FrmMain
+        {
+
+        }
+        ```
+
+    5. 제네릭 ()
+        - c++ 템플릿이 컴파일 시 데이터타입 결정이라면
+        - 제네릭은 런타임(동적) 데이터타입 결정을한다.
+
+        ```cs
+        public void DoSomething<T>(T obj) where T : class
+        {
+            Console.WriteLine(obj.Tostring());
+        }
+        ```
+
+        - where T : class -> 클래스만
+        - where T : struct -> 기본 타입만
+        - where T : new() -> 기본생성자 필요
+        - where T : BaseClass -> 특정 클래스, 인터페이스 상속 필수
+
+        <img src="./image/cs0012.png" width=600>
+
+    6. 비동기햄, 스레드큰행님 - [소스](./day05/Day05Study/SyntaxWinApp03/FrmMain.cs)
+        - 동기, 스레드를 별도로 사용하지않으면 UI 프로그램이 block 될 수 있음
+
+        - 해결방법 1.
+            - Application.DoEvents() 메서드추가. 권장X
+        - 해결방법 2.
+            - 비동기 async, await 키워드사용
+        - 해결방법 3.
+            - 전통 스레드 사용. 권장X
+        - 해결방법 4
+            - BackgroundWorker 클래스 사용
+        
+        <img src="./image/cs0013.png" width=600>
 
 ## 6일차
+
+### C# 마지막
+- C# 고급
+    1. 비동기, 스레드
+        - BackgroundWorker 클래스 사용
 
 ### C# 응용 - WPF
 
