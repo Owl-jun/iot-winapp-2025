@@ -580,6 +580,26 @@ IoT 개발자 C#/WinApp 리포지토리 2025
     - SmallImageList, LargeImageList로 아이콘 이미지 설정
     - SelectedIndexChanged : 아이템 선택이 변경될 때 발생하는 이벤또
 
+- `MonthCalendar` : 스케줄 등록을 위한 컨트롤
+    - Cal* 로 이름 사용
+    - FirstDayOfWeek : 한 주 시작일을 설정, Default는 일요일 부터
+    - DateChanged : 기본 이벤트, 날짜 변경시 발생
+
+- `DateTimePicker` : 단순 일자 선택하는 컨트롤
+    - Dtp* 로 이름 사용
+    - 속성 거의 사용안함
+    - 이벤트도 거의 사용안함둥
+
+- `LinkLabel` : 링크 클릭 컨트롤
+    - 기존 Label 컨트롤과 유사
+    - LinkClicked : 버튼과 같이 클릭하는 이벤트
+
+- `MenuStrip` : 프로그램 메뉴 관리
+    - Mnu* 이름시작. 사용하는 메뉴는 반드시 이름을 변경할 것 (디폴트 이름이 굉장히 길다.)
+
+- `Tooltip` : 툴팁 표시해주는 컨트롤
+    - 하나로 모든 컨트롤 관리가능
+
 ### C# 문법
 - C# 기본
     - enum : 열거형
@@ -599,7 +619,7 @@ IoT 개발자 C#/WinApp 리포지토리 2025
         
 ### C# 마지막
 - C# 고급
-    1. 비동기, 스레드
+    1. 비동기, 스레드 - [소스](./day06/Day06Study/SyntaxWinApp01/FrmMain.cs)
         - BackgroundWorker 클래스 사용
         - .NET 특화된 스레드사용 클래스
         - 전통적인 스레드를 쉽게 쓸 수 있게 변형
@@ -609,11 +629,13 @@ IoT 개발자 C#/WinApp 리포지토리 2025
         
 
 ### WinForms 응용
-- 윈앱 응용개발
+- 윈앱 응용개발 - [소스](./day06/Day06Study/WinControlsApp/FrmMain.cs)
     - UI 컨트롤 예제
 
+    <img src="./image/cs0014.png" width=600>
 
 ### C# 응용 - WPF
+
 
 ## 10일차
 
