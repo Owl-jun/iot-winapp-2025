@@ -544,21 +544,74 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 
         - 해결방법 1.
             - Application.DoEvents() 메서드추가. 권장X
-        - 해결방법 2.
+        - **해결방법 2.**
             - 비동기 async, await 키워드사용
         - 해결방법 3.
             - 전통 스레드 사용. 권장X
-        - 해결방법 4
+        - **해결방법 4**
             - BackgroundWorker 클래스 사용
         
         <img src="./image/cs0013.png" width=600>
 
 ## 6일차
 
+### 윈앱 컨트롤 5
+- `BackgroundWorker` : 백그라운드에서 작업할 일 중 스레드 처리가 되어야할 부분을 손 쉽게 동작시켜주는 컨트롤
+    - Bgw~ 이름을 사용
+    - 일반 속성은 잘 사용안함
+    - `DoWork` : 백그라운드(쓰레드) 작업
+    - `ProgressChanged` : UI상 변화를 처리 작업
+    - `RunWorkerCompleted` : 작업완료시 UI 완료 처리
+- `CheckBox` :
+    - Chk*
+
+- `TrackBar` : 
+    - Trb*
+    - TickFrequency : 간격표시 줄 간격
+
+- `TreeView` : 탐색기 좌측 창 처럼 보여주는 녀석 (트리 형식으로 디렉터리보여주기)
+    - Trv*
+    - ImageList : 아이콘 이미지 설정
+    - AfterSelect, AfterExpand, AgterCollapse 이벤트를 주로 사용.
+
+- `ListView` : 탐색기 우측 목록 과 같이 보여주는 녀석
+    - Lsv*
+    - View : LargeIcon, SmallIcon, List, Detail 등 탐색기 보기 기능과 동일
+    - SmallImageList, LargeImageList로 아이콘 이미지 설정
+    - SelectedIndexChanged : 아이템 선택이 변경될 때 발생하는 이벤또
+
+### C# 문법
+- C# 기본
+    - enum : 열거형
+    ```cs
+    public enum Direction {
+        RIGHT,      // 0
+        LEFT,       // 1
+        UP,         // 2
+        DOWN,       // 3
+        custom = 30 // 30
+    }
+    ```
+
+    - 모달창, 모달리스창 : 창 위에 다른 창을 띄울 때 접근권한 제어 형태
+        - Modal : 부모창과 연관된 작업을 할 때 사용, 모달 창이 닫히지 않으면 부모창을 제어할 수 없음 (메시지박스)
+        - Modaless : 부모창과 상관없이 동작, 메인창을 언제나 닫을 수 있고, 메인 창을 닫으면 모두 종료. 사용시 주의
+        
 ### C# 마지막
 - C# 고급
     1. 비동기, 스레드
         - BackgroundWorker 클래스 사용
+        - .NET 특화된 스레드사용 클래스
+        - 전통적인 스레드를 쉽게 쓸 수 있게 변형
+        - this.Invoke, async, await, Task 등 사용할 필요없음
+        - 취소 기능을 추가 할 수 있음.
+        - 복잡한 비동기 작업이 많으면 Task 기반을 사용 권장
+        
+
+### WinForms 응용
+- 윈앱 응용개발
+    - UI 컨트롤 예제
+
 
 ### C# 응용 - WPF
 
