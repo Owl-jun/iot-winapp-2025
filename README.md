@@ -652,6 +652,8 @@ IoT 개발자 C#/WinApp 리포지토리 2025
     - 디자이너 -> Blend for Visual Studio 디자인툴 사용
     - 개발자 -> VS에서 코딩으로 디자인
 
+    <img src="./image/cs0017.png" width=600>
+
 - XAML
     - `eXtensible Application Markup Language` : XML 기반 언어
     - WPF(Windows), UWP(Win, Linux, MacOS), MAUI(모바일) 동일하게 사용
