@@ -1,0 +1,75 @@
+﻿<Window x:Class="WpfSudyApp02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSudyApp02"
+        mc:Ignorable="d"
+        Title="첫번째 WPF앱" Height="350" Width="600">
+    <Grid HorizontalAlignment="Right" Width="600">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="197*"/>
+            <ColumnDefinition Width="200*"></ColumnDefinition>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90.96"/>
+            <RowDefinition Height="109*"/>
+            <RowDefinition Height="134*"/>
+        </Grid.RowDefinitions>
+        <!-- 그리드 정의 영역 끝 -->
+
+        <StackPanel Margin="0,108,0,10" Grid.Column="3" Grid.Row="1">
+            <TextBox x:Name="TxtTest" Text="샘플입니다"/>
+            <TextBlock Text="라벨과 동일한 기능 텍스트에 작성"/>
+            <Label Content="라벨도 있음"/>
+            <ProgressBar x:Name="PrgProcess" Minimum="0" Value="30" Height="20" Margin="5"/>
+            <ComboBox x:Name="CboFonts"/>
+        </StackPanel>
+
+        <DockPanel Grid.Row="0" Grid.Column="3">
+            <Button Content="Left" DockPanel.Dock="Left"></Button>
+            <Button Content="Right" DockPanel.Dock="Right"></Button>
+            <Button Content="Top" DockPanel.Dock="Top"></Button>
+            <Button Content="Bottom" DockPanel.Dock="Bottom"></Button>
+            <Button Content="Center"></Button>
+        </DockPanel>
+
+        <WrapPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,134" Grid.RowSpan="2">
+            <Button Content="ddddd 1" />
+            <Button Content="dd 2ds" />
+            <Button Content="dd 3" />
+        </WrapPanel>
+        <Canvas Grid.Row="1" Grid.Column="2">
+            <Button Content="zzzz" Canvas.Left="0" />
+            <Button Content="zzzz1" Canvas.Bottom="10"/>
+            <Button Content="zzzz2"/>
+        </Canvas>                
+        <Button x:Name="BtnCheck" Content="체크" Grid.Row="2"
+                Click="BtnCheck_Click" RenderTransformOrigin="0.5,0.5" Margin="127,52,20,0" Height="80" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-81.944"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-22.037"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Grid Grid.ColumnSpan="2" Margin="0,0,0,91"/>
+        <Button Content="췌크" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="59" Width="425" Margin="-25,72,0,0" Grid.ColumnSpan="3"/>
+        <Button Grid.Column="3" Content="췤" HorizontalAlignment="Left" Margin="2,73,0,0" Grid.Row="2" VerticalAlignment="Top" Width="343" RenderTransformOrigin="0.5,0.5" Height="57">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.992"/>
+                    <SkewTransform AngleX="1.456" AngleY="-19.078"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-4.836" Y="-58.822"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+
+    </Grid>
+</Window>
