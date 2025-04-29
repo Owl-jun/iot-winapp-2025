@@ -798,7 +798,38 @@ IoT 개발자 C#/WinApp 리포지토리 2025
     - WPF Rectangle , Ellipse , Path 등은 전부 벡터이미지
 
 - 컨트롤 디자인, 리소스
-    - 
+    - WPF는 컨트롤에 디자인도 맘대로 변경가능
+    - 리소스 : 컨트롤의 공유화
+        - App.xaml Application.Resources 에 필요한 컨트롤 디자인을 정의
+        - 각각의 Window, Page.xaml에 사용
+        - App.Resources 에 선언된 리소스는 StaticResource로 공용 느낌으로 관리된다.
+    
+    - ResourceDictionary 
+        - App.xaml 리소스를 계속 추가하면 유지보수가 어려워진다, 대안으로 리소스사전 생성
+    - 참조 깃허브 - https://github.com/StanislawSwierc/WpfThemesCollection
+
+### MahApps.Metro 프레임워크
+- 공식사이트 - https://mahapps.com/
+    - 쉽게 Metro UI/Modern UI 적용이 가능한 프레임워크
+
+
+- 사용법
+    1. NuGet 패키지 관리 >
+        - MahApps.Metro
+        - MahApps.Metro.IconPacks 설치
+    2. https://github.com/MahApps/MahApps.Metro/releases MahApps.Metro.Demo-v2.4.10-rc0001 다운로드
+    3. https://github.com/MahApps/IconPacks.Browser - IconPacks.Browser-net8-v2.0.0.zip 다운로드
+    4. App.xaml에 필요한 리소스 코드 복붙
+    5. MainWindows.xaml.cs        
+        - Window -> MetroWindow 변경
+    6. MainWindows.xaml
+        - Window -> mah.MetroWindow로 변경
+        - xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" 추가
+
+    7. 실행결과
+
+    8. Theme - Light, Dark 2개
+    9. Accent - Amber ~ Yellow 총 23개
 
 - MVVM 디자인 패턴
 

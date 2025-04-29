@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:WpfStudyApp04"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="/Themes/ShinyBlue.xaml"/>
     </Application.Resources>
 </Application>
