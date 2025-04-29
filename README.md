@@ -789,11 +789,11 @@ https://github.com/user-attachments/assets/3ea989e3-3905-4050-a9d3-fe86732419c4
 ## 8일차
 
 ### WPF 개발방법 및 컨트롤 2
-- 데이터베이스 데이터 바인딩
+- 데이터베이스 데이터 바인딩 - [소스](./day08/Day08Study/WpfStudyApp01/MainWindow.xaml.cs)
     - Xaml Binding 방식
     - 실행 결과 위와 동일
 
-- 네비게이션
+- 네비게이션 - [소스](./day08/Day08Study/WpfStudyApp2/MainWindow.xaml)
     - 화면 전환
     - 메뉴 클릭으로 화면전환
     - Window, Page 컨트롤
@@ -803,27 +803,29 @@ https://github.com/user-attachments/assets/3ea989e3-3905-4050-a9d3-fe86732419c4
         - NavigationService 사용
         - NavigationUIVisibility 속성
 
-- 벡터 디자인, 비트맵 디자인
+- 벡터 디자인, 비트맵 디자인 - [소스](./day08/Day08Study/WpfStudyApp03/MainWindow.xaml)
     - 이미지 속성 : 내용 | 항상 복사
     - WPF Rectangle , Ellipse , Path 등은 전부 벡터이미지
 
-- 컨트롤 디자인, 리소스
+- 컨트롤 디자인, 리소스 - [소스](./day08/Day08Study/WpfStudyApp04/MainWindow.xaml)
     - WPF는 컨트롤에 디자인도 맘대로 변경가능
     - 리소스 : 컨트롤의 공유화
         - App.xaml Application.Resources 에 필요한 컨트롤 디자인을 정의
         - 각각의 Window, Page.xaml에 사용
         - App.Resources 에 선언된 리소스는 StaticResource로 공용 느낌으로 관리된다.
     
-    - ResourceDictionary 
+    - ResourceDictionary - [소스](./day08/Day08Study/WpfStudyApp04/App.xaml)
         - App.xaml 리소스를 계속 추가하면 유지보수가 어려워진다, 대안으로 리소스사전 생성
     - 참조 깃허브 - https://github.com/StanislawSwierc/WpfThemesCollection
+
+    <img src="./image/cs0019.png" width=600>
 
 ### MahApps.Metro 프레임워크
 - 공식사이트 - https://mahapps.com/
     - 쉽게 Metro UI/Modern UI 적용이 가능한 프레임워크
 
 
-- 사용법
+- 사용법 - [소스](./day08/Day08Study/WpfStudyApp05/MainWindow.xaml)
     1. NuGet 패키지 관리 >
         - MahApps.Metro
         - MahApps.Metro.IconPacks 설치
@@ -838,9 +840,18 @@ https://github.com/user-attachments/assets/3ea989e3-3905-4050-a9d3-fe86732419c4
 
     7. 실행결과
 
+    <img src="./image/cs0020.png" width=600>
+
     8. Theme - Light, Dark 2개
     9. Accent - Amber ~ Yellow 총 23개
 
+- 연습 예제
+    - MahApps.Metro.Demo를 확인하면서 컨트롤 추가
+    - MahApps.Metro Github 소스 확인 필요
+    <img src="./image/cs0021.png" width=600>
+
+
+## 9일차
 - MVVM 디자인 패턴
 
 
