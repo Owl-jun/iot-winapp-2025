@@ -8,7 +8,7 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 https://github.com/user-attachments/assets/3ea989e3-3905-4050-a9d3-fe86732419c4
 
 - 실제 bash 를 실행 한게 아니고, 명령어를 파일로(.sh) 작성하여 wsl.exe -> 명령어.sh 실행시키는 방식 이기에 동작하지 않는 명령어가 많음.
-- 제공되는 기능 : History , Tutorial
+- 제공되는 기능 : History , Tutorial , 폰트 사이즈 조절
 - 개인적인 우분투 리눅스 학습 도중 이런게 있으면 환경설정 없이 편하게 할 수 있겠다 싶어 제작하게 됨.
 
 ## 1일차
