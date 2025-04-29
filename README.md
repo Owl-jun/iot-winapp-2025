@@ -689,6 +689,8 @@ IoT 개발자 C#/WinApp 리포지토리 2025
     - (상용) 데브익스프레스 - https://www.devexpress.com/
     - (상용) 인프라지틱스 - https://www.infragistics.com/
     - **(무료) 마하앱** - https://mahapps.com/
+    - **WPF UI** - https://github.com/lepoco/wpfui
+    - Material Design In XAML Toolkit - http://materialdesigninxaml.net/
  
 ### WPF 개발방법 및 컨트롤 1
 - **WPF 애플리케이션** 선택
@@ -776,8 +778,24 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 
 ## 8일차
 
+### WPF 개발방법 및 컨트롤 2
+- 데이터베이스 데이터 바인딩
+    - Xaml Binding 방식
+    - 실행 결과 위와 동일
+
 - 네비게이션
-    - 
+    - 화면 전환
+    - 메뉴 클릭으로 화면전환
+    - Window, Page 컨트롤
+        - Window : Main
+        - Page : Sub
+    - NavigationService
+        - NavigationService 사용
+        - NavigationUIVisibility 속성
+
+- 벡터 디자인, 비트맵 디자인
+    - 이미지 속성 : 내용 | 항상 복사
+    - WPF Rectangle , Ellipse , Path 등은 전부 벡터이미지
 
 - 컨트롤 디자인, 리소스
     - 

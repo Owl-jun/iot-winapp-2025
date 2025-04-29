@@ -4,9 +4,17 @@ namespace WinFormProject
 {
     public partial class FrmMain : Form
     {
+        private bool hIsShow = false;
+        private bool tIsShow = false;
+        private FrmWindow historyForm;
+        private FrmWindow tutorialForm;
+
         public FrmMain()
         {
             InitializeComponent();
+            historyForm = new FrmWindow();
+            tutorialForm = new FrmWindow();
+            LoadTextFile();
         }
 
         private string currentDir = "/home/ubuntu";
@@ -32,12 +40,11 @@ namespace WinFormProject
 
         private void BtnProcess_Click(object sender, EventArgs e)
         {
+            historyForm.AppendHistory(TxtScript.Text);
             string script = GetFullCommand(TxtScript.Text);
 
             ////
             ////
-            ////
-            // historyForm.AppendHistory(script);   스크립트 히스토리에 저장 하기 문제 해결할 것.
             ////
             ////
             ////
@@ -92,21 +99,52 @@ namespace WinFormProject
             TxtResult.Font = new Font(TxtScript.Font.FontFamily, value);
         }
 
-        private bool isShow = false;
-        private FrmTutorial historyForm;  
+
         private void BtnTutor_Click(object sender, EventArgs e)
         {
-            if (!isShow)
+            if (!hIsShow)
             {
-                historyForm = new FrmTutorial();  // 한 번만 생성
-                isShow = true;
-                historyForm.FormClosed += (s, ev) => isShow = false;  // 사용자가 직접 닫았을 경우도 대비
+                hIsShow = true;
+                historyForm.FormClosed += (s, ev) => hIsShow = false;
+                historyForm.StartPosition = FormStartPosition.Manual;
+                historyForm.Location = new Point(this.Location.X + this.Width, this.Location.Y);
                 historyForm.Show();
             }
             else
             {
-                isShow = false;
-                historyForm.Close();
+                hIsShow = false;
+                historyForm.Hide();
+            }
+        }
+
+        private void BtnTutor_Click_1(object sender, EventArgs e)
+        {
+            if (!tIsShow)
+            {
+                tIsShow = true;
+                tutorialForm.FormClosed += (s, ev) => tIsShow = false;
+                tutorialForm.StartPosition = FormStartPosition.Manual; // 위치 수동 설정
+                tutorialForm.Location = new Point(this.Location.X + this.Width, this.Location.Y);
+                tutorialForm.Show();
+            }
+            else
+            {
+                tIsShow = false;
+                tutorialForm.Hide();
+            }
+        }
+        private void LoadTextFile()
+        {
+            string filePath = "Tutorial.txt"; // 텍스트 파일 경로
+
+            if (File.Exists(filePath))
+            {
+                string text = File.ReadAllText(filePath);
+                tutorialForm.AppendText(text);
+            }
+            else
+            {
+                MessageBox.Show("파일이 존재하지 않습니다.");
             }
         }
 

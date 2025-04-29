@@ -35,6 +35,7 @@
             label1 = new Label();
             label2 = new Label();
             numericUpDown1 = new NumericUpDown();
+            BtnHistory = new Button();
             BtnTutor = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
@@ -103,15 +104,29 @@
             numericUpDown1.Value = new decimal(new int[] { 6, 0, 0, 0 });
             numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
+            // BtnHistory
+            // 
+            BtnHistory.BackColor = SystemColors.ActiveCaption;
+            BtnHistory.Font = new Font("맑은 고딕", 9F, FontStyle.Bold);
+            BtnHistory.Location = new Point(596, 91);
+            BtnHistory.Name = "BtnHistory";
+            BtnHistory.Size = new Size(146, 30);
+            BtnHistory.TabIndex = 5;
+            BtnHistory.Text = "History";
+            BtnHistory.UseVisualStyleBackColor = false;
+            BtnHistory.Click += BtnTutor_Click;
+            // 
             // BtnTutor
             // 
-            BtnTutor.Location = new Point(596, 91);
+            BtnTutor.BackColor = Color.IndianRed;
+            BtnTutor.Font = new Font("맑은 고딕", 9F, FontStyle.Bold);
+            BtnTutor.Location = new Point(596, 141);
             BtnTutor.Name = "BtnTutor";
-            BtnTutor.Size = new Size(146, 30);
-            BtnTutor.TabIndex = 5;
-            BtnTutor.Text = "History";
-            BtnTutor.UseVisualStyleBackColor = true;
-            BtnTutor.Click += BtnTutor_Click;
+            BtnTutor.Size = new Size(146, 32);
+            BtnTutor.TabIndex = 6;
+            BtnTutor.Text = "Tutorial";
+            BtnTutor.UseVisualStyleBackColor = false;
+            BtnTutor.Click += BtnTutor_Click_1;
             // 
             // FrmMain
             // 
@@ -121,12 +136,14 @@
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(749, 447);
             Controls.Add(BtnTutor);
+            Controls.Add(BtnHistory);
             Controls.Add(numericUpDown1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(TxtResult);
             Controls.Add(TxtScript);
             Controls.Add(BtnProcess);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FrmMain";
             StartPosition = FormStartPosition.CenterScreen;
@@ -145,6 +162,7 @@
         private Label label1;
         private Label label2;
         private NumericUpDown numericUpDown1;
+        private Button BtnHistory;
         private Button BtnTutor;
     }
 }
