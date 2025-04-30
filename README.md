@@ -832,6 +832,19 @@ https://github.com/user-attachments/assets/3ea989e3-3905-4050-a9d3-fe86732419c4
     2. https://github.com/MahApps/MahApps.Metro/releases MahApps.Metro.Demo-v2.4.10-rc0001 다운로드
     3. https://github.com/MahApps/IconPacks.Browser - IconPacks.Browser-net8-v2.0.0.zip 다운로드
     4. App.xaml에 필요한 리소스 코드 복붙
+    ```xml
+    <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+        <!-- Theme setting -->
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+    ```
     5. MainWindows.xaml.cs        
         - Window -> MetroWindow 변경
     6. MainWindows.xaml
@@ -852,7 +865,12 @@ https://github.com/user-attachments/assets/3ea989e3-3905-4050-a9d3-fe86732419c4
 
 
 ## 9일차
-- MVVM 디자인 패턴
+
+### MahApps.Metro 프레임워크
+- 컨트롤 사용법
+
+### WPF UI 프레임워크
+- 기본 사용법
 
 
 ## 10일차
