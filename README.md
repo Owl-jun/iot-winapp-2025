@@ -867,10 +867,43 @@ https://github.com/user-attachments/assets/3ea989e3-3905-4050-a9d3-fe86732419c4
 ## 9일차
 
 ### MahApps.Metro 프레임워크
-- 컨트롤 사용법
+- 컨트롤 사용법 - [소스](./day09/Day09Study/WpfStudyApp05/MainWindow.xaml)
+    - ProgressBar , MetroProgressBar , ProgressRing
+    - TabControl
 
 ### WPF UI 프레임워크
-- 기본 사용법
+- 기본 사용법 -[소스](./day09/Day09Study/WpfStudyApp07/MainWindow.xaml)
+    - NuGet 패키지 관리자 -> WPF-UI 검색 후 설치
+    - VS Extension for WPF UI
+        - 메뉴확장 > 확장관리
+        - WPF-UI 검색 후 설치
+    - MainWIndow.xaml을 추가 생성
+    - App.xaml 오픈
+    
+    [소스](./day09/Day09Study/WpfStudyApp07/App.xaml)
+    ```cs 
+    <!-- App.xaml.cs -->
+    private static readonly IHost _host = Host
+        .CreateDefaultBuilder()
+        .ConfigureAppConfiguration(c => { c.SetBasePath(Path.GetDirectoryName(AppContext.BaseDirectory)); })
+        .ConfigureServices((context, services) =>
+        {
+            // throw new NotImplementedException("No service or window was registered.");
+            services.AddSingleton<MainWindow>();
+        }).Build();
+
+        private async void OnStartup(object sender, StartupEventArgs e)
+        {
+            await _host.StartAsync();
+            var mainWindow = _host.Services.GetRequiredService<MainWindow>();
+            mainWindow.Show();
+        }
+    ```
+
+    - 실행결과
+
+    <img src="./image/cs0022.png" width=600>
+
 
 
 ## 10일차
